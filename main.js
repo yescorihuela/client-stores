@@ -12,6 +12,7 @@ function createStoresWithDevices(qtyOfStores = 2) {
     stores.push({
       id: i,
       store_id: `store_${i}`,
+      time: null,
       devices: {
         printer: statuses[getRandomIntInclusive(0, 1)],
         webserver: statuses[getRandomIntInclusive(0, 1)],
@@ -60,5 +61,4 @@ function createSocket() {
 
 }
 
-setInterval(createSocket, 6 * 1000);
-// createSocket();
+setInterval(createSocket, 30 * 1000);
